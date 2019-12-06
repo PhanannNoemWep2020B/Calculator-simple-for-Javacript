@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label for="number">Enter Number1</label>
+    <input type="number" value="" id="number1"><br><br>
+    <label for="number">Enter Number2</label>
+    <input type="number" value="" id="number2">
+
+    <h2 id="result"></h2>
+
+    <button type="button" id="btn-validate" onclick="validateNumber()">Sum</button>
+</body>
+    <script>
+        function getNumber(){
+            var number = document.getElementById('number').value;
+            console.log(number);
+        }
+
+        // condition
+
+        function validateNumber(){
+
+            var result = document.getElementById('result');
+            
+            var number1 = document.getElementById('number1').valueAsNumber;
+            var number2 = document.getElementById('number2').valueAsNumber;
+            var sum =0;
+            if(number1 <=0){
+                sum = sum;
+            }else{
+                sum = number1 + number2;
+            }
+            result.innerHTML= sum;
+        }
+    </script>
+</html>
